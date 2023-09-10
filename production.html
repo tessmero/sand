@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Bottom navbar example · Bootstrap</title>
+    <title>tessmero.github.io</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
     @import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css');
@@ -16,9 +17,9 @@
 
   </head>
   <body style="text-align:center">
-  <nav class="d-sm-none d-md-block navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="d-sm-none d-md-block navbar navbar-expand-xl navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">tessmero.github.io</a>
+    <a class="navbar-brand" href="index.html">tessmero.github.io</a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,6 +28,50 @@
     
     
          <li class="nav-item active">
+           <a class="nav-link" href="sand.html">Sand</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="slide.html">Slide</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="cube.html">Cube</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="clouds.html">Clouds</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="spirals.html">Spirals</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="unicycle.html">Unicycle</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="castle.html">Castle</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="planet.html">Planet</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="trees.html">Trees</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="gawlf.html">Gawlf</a>
+         </li>
+        
+         <li class="nav-item ">
+           <a class="nav-link" href="puppy-puddle.html">Puppy Puddle</a>
+         </li>
+        
+         <li class="nav-item ">
            <a class="nav-link" href="warp.html">Warp</a>
          </li>
         
@@ -47,26 +92,35 @@
       
   
   
-<canvas id="gameCanvas"></canvas>
+<div>
+ <canvas id="backLayer" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+ <canvas id="frontLayer" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+ </div>
+ 
 
 <script src="production.js"></script>
       
-      
-<style>
-    canvas {
-        border: 1px solid black;
-    }
-    
+
+<a id="source-link" href="https://github.com/tessmero/sand">source</a>
+
+<style>    
     * { margin: 0; padding: 0;}
 
-    body, html { height:100%; }
-
-    canvas {
-        position:absolute;
-        left: 0px;
-        width:100%;
-        height:100%;
+    body, html { height:100%; background-color:black } 
+    
+    #source-link {
+        font-size:10px;
+        position: fixed;
+        z-index: 999;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: black;
+        color: white !important;
+        padding: 2px;
     }
 </style>
+
+
       
 </html>

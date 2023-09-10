@@ -1,10 +1,16 @@
-Sliding grid animation where each row/column is treated as a loop. The grid deterministacally solves itself like a rubik's cube.
+Multi-colored sand particles accumulate and flow realistically
 
-Also animated transition between square grid and radial grid
+Performance is optimized by splitting particles into three categories
+- Falling particles are handled procedurally (like [warp](https://github.com/tessmero/warp)), and 
+- Unstable stacks of sand are handled with special 1D physics engin
+- settled particles are delegated to a secondary graphics buffer which never has to be re-painted (like [trees](https://github.com/tessmero/trees))
+
+
+Reload the page to reset.
 
 ## Demo
 
-https://tessmero.github.io/slide.html
+https://tessmero.github.io/sand.html
 
 ## Usage
 

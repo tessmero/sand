@@ -4,23 +4,13 @@
 // Render graphics
 function draw(fps) {
     
-    var ctx = global.ctx
-    var canvas = global.canvas
+    var ctx = global.backCtx
     
     // draw background
     ctx.fillStyle = global.backgroundColor
     ctx.fillRect( -10,-10,20,20 )
 
-    // restrict further drawing to square in center of screen
-    ctx.beginPath()
-    ctx.moveTo(0,0)
-    ctx.lineTo(1,0)
-    ctx.lineTo(1,1)
-    ctx.lineTo(0,1)
-    ctx.closePath()
-    ctx.clip()
-
-        //debug
+    //debug
     if( false ){
         // draw screen corners
         var r = .1
@@ -29,7 +19,7 @@ function draw(fps) {
     }
     
     
-    // draw fallling snow particles
+    // draw falling snow particles
     ctx.fillStyle = global.snowColor
     var r = global.particleRadius
     rngSeed = global.snowSeed
@@ -40,6 +30,7 @@ function draw(fps) {
         var x = rand()
         var y = rand()
         var y0 = nnmod( y + dy, 1 )
+        if( y0 > global.snowAccHeight ) continue
         var y1 = y0+ddy
         ctx.fillRect( x-r, y1-r, r, r )
         
@@ -52,6 +43,7 @@ function draw(fps) {
 
     // draw words
     global.allWords.forEach(w => w.draw(ctx))
+
     
     // draw stacks
     var stackWidth = 1/global.nStacks
@@ -59,7 +51,7 @@ function draw(fps) {
         ctx.fillStyle = c
         global.stacks.forEach(s => s.draw(ctx,c))
     })
-
+    
     // debug 
     if( false ){
         ctx.fillStyle = 'black'

@@ -3,17 +3,22 @@ class Word{
     constructor(s,pos,color){
         this.s = s
         this.pos = pos
-        this.vel = v(0,randRange(...global.wordFallSpeed))
+        this.vel = v(0,this.randSpeed())
         this.color = color
         
         this.d = v(0,0)
+    }
+    
+    randSpeed(){
+        var r = global.wordFallSpeed
+        return r[0] + Math.random() * (r[1]-r[0])
     }
     
     update(dt){
         this.d = this.vel.mul(dt)
         this.pos = this.pos.add(this.d)
         
-        return (this.pos.y < 1)
+        return (this.pos.y < global.snowAccHeight)
     }
     
     draw(g){
