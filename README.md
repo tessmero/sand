@@ -1,12 +1,12 @@
-Multi-colored sand particles accumulate and flow realistically
-
-Performance is optimized by splitting particles into three categories
-- Falling particles are handled procedurally (like [warp](https://github.com/tessmero/warp)), and 
-- Unstable stacks of sand are handled with special 1D physics engin
-- settled particles are delegated to a secondary graphics buffer which never has to be re-painted (like [trees](https://github.com/tessmero/trees))
-
+Multi-colored sand particles accumulate and flow realistically.
 
 Reload the page to reset.
+
+Performance is optimized by grouping particles into three categories
+- Falling particles are drawn procedurally (like [warp](https://github.com/tessmero/warp))
+- Unstable piles of particles are handled with simplified 1D physics engine
+- Settled particles are drawn on a secondary graphics buffer that doesn't get cleared (like [trees](https://github.com/tessmero/trees))
+
 
 ## Demo
 
